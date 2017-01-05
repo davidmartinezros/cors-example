@@ -1,0 +1,1 @@
+ng build --base-href http://davidmartinezros.com/Angular2/cors-example/ --prod --env=prod

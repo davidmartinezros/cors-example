@@ -1,3 +1,16 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>CorsExample</title>
+  <base href="/">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+  <app-root>Loading...</app-root>
+
 <!--
 Running in localhost, the browser blocks http calls and you have to install the Chrome plugin Cross-Domain CORS.
 With this plugin, you don't have to set the request headers.
@@ -22,20 +35,20 @@ With this plugin, you don't have to set the request headers.
       if(isIE8) {
         invocation.onload = outputResult;
         invocation.open("GET", url, true);
-        /*
+        
         invocation.setRequestHeader('Access-Control-Allow-Origin', '*');
         invocation.setRequestHeader('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE,OPTIONS');
         invocation.setRequestHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization, Content-Length, X-Requested-With');
-        */
+        
         invocation.send();
       }
       else {
         invocation.open('GET', url, true);
-        /*
+        
         invocation.setRequestHeader('Access-Control-Allow-Origin', '*');
         invocation.setRequestHeader('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE,OPTIONS');
         invocation.setRequestHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization, Content-Length, X-Requested-With');
-        */
+        
         invocation.onreadystatechange = handler;
         invocation.send();
       }
@@ -74,3 +87,6 @@ With this plugin, you don't have to set the request headers.
 <div id="textDiv">
     The information below (when it appears) has been fetched using cross-site XHR.
 </div>
+
+</body>
+</html>
